@@ -1,0 +1,25 @@
+<h2>{{title}}</h2>
+<!-- <div class="card-container" *ngFor="let x of newsdata">
+    <div class="card-body">
+        <img [src]="x.urlToImage" class="card-img-top" alt="">
+        <div class="card-body">
+            <h1 class="card-title">{{x.title}}</h1>
+            <p class="card-text">{{x.description}}</p>
+            <a href="{{x.url}}" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="card-container">
+<div class="card" *ngFor="let x of newsdata" onclick="toggleZoom(this)">
+    
+    <img class="card-img-top" [src]="x.urlToImage" alt="Card image cap">
+    <div class="card-body">
+        <h3 class="card-title"><b>{{x.title}}</b></h3>
+      <p class="card-text">{{x.description}}</p>
+      <a href="{{x.url}}" class="btn btn-primary">Readmore</a><br>
+      <h5 class="date">Published Date:{{x.publishedAt | date:'short'}}</h5>
+    </div>
+  </div></div></div>
+ 
